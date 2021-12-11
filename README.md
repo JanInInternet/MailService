@@ -13,12 +13,12 @@ necesario installare questa versione o una versione succesiva per poter eseguire
    utilizzare la password del account standard
    
 # Cheat Sheet
-* Per le Intestazioni `<hN>TEXT</hN>` ->  1 <= N <= 6 <h3>TEXT</h3>
-* Per i paragrafi `<p>text</p>`                       <p>text</p>
+* Per le Intestazioni `<hN>TEXT</hN>` ->  1 <= N <= 6                                     <h3>TEXT</h3>
+* Per i paragrafi `<p>text</p>`                                                           <p>text</p>
 * I tag p e hN separano le porzioni di testo con dello spzio
-* Per inserire testo con enfasi `<em>text</em>`       <p><em>text</em></p>
-* Per testo in grasseto `<strong>text</strong>`       <p><strong>text</strong></p>
-* Si può inserire un tag al interlo di un altro `<p><em>text</em></p>`
+* Per inserire testo con enfasi `<em>text</em>`                                           <p><em>text</em></p>
+* Per testo in grasseto `<strong>text</strong>`                                           <p><strong>text</strong></p>
+* Si può inserire un tag al interlo di un altro `<p><em><strong>text</strong></em></p>`   <p><em><strong>text</strong></em></p>
 
 # Problemi
 
