@@ -93,7 +93,7 @@ public class Main extends Application {
 
     private void sendMail(Button bu, HBox headermsg, VBox mailconfig, TextArea msg) {
         // pass jt mvlvgxpwzjlnbt
-        
+
         // Destination string build
         DestinationVBox dvb = (DestinationVBox) mailconfig.getChildren().get(4);
         StringBuilder destinatary = new StringBuilder();
