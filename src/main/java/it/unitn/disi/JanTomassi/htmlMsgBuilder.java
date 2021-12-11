@@ -1,5 +1,7 @@
 package it.unitn.disi.JanTomassi;
 
+import java.time.LocalDate;
+
 public class htmlMsgBuilder {
     String header = """
             <!DOCTYPE html>
@@ -54,7 +56,7 @@ public class htmlMsgBuilder {
             </head>
             <div id="body" style="
                     font-family: 'Outfit', sans-serif;">
-                <div id="header" style="text-align: center; 
+                <div id="header" style="text-align: center;
                     background: rgb(0, 0, 160);
                     width: 100%;
                     margin-bottom: 50pt;">
@@ -62,7 +64,7 @@ public class htmlMsgBuilder {
 
     String body = """
                     <h4 style="color: yellow;"><i>La newsletter ufficiale dell'Associazione Ex Alunni Chris Cappell</i></h4>
-                    <h4 style="color: rgb(175, 175, 175);">%s, NUMERO %s</h4>
+                    <h4 style="color: rgb(175, 175, 175);">%td/%tB, NUMERO %s</h4>
                     <h1 style="color: white;">%s</h1>
                     <h4 style="color: rgb(175, 175, 175);">%s</h4>
                 </div>
@@ -76,7 +78,7 @@ public class htmlMsgBuilder {
                 color: white;
                 text-align: center;">
                 <h3>%s</h3>
-                        <h5>-%s</h5>
+                        <h5>%s</h5>
                     </div>
             """;
     String footer = """
@@ -84,7 +86,7 @@ public class htmlMsgBuilder {
                 display: table;
                 clear: both;"></div>
                 </div>
-                <footer style="background: rgb(0, 0, 160); 
+                <footer style="background: rgb(0, 0, 160);
                 position: relative;
                 height: 25px;
                 width: 100%;"></footer>
@@ -92,9 +94,9 @@ public class htmlMsgBuilder {
             </html>
             """;
 
-    public htmlMsgBuilder(String nArticolo, String Data, String titolo, String sommario,
+    public htmlMsgBuilder(LocalDate Data, String nArticolo, String titolo, String sommario,
                           String nomeArticolo, String cit, String nomeCit, String msg) {
-        body = String.format(body, nArticolo, Data, titolo, sommario, nomeArticolo, cit, nomeCit, msg);
+        body = String.format(body, Data, Data, nArticolo, titolo, sommario, nomeArticolo, msg, cit, nomeCit);
         System.out.println(body);
         System.out.println(header + body + footer);
     }

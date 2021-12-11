@@ -128,7 +128,7 @@ public class Main extends Application {
                     InternetAddress.parse(destinatary.toString())
             );
             message.setSubject(((TextField) mailconfig.getChildren().get(3)).getText());
-            htmlMsgBuilder htmlMB = new htmlMsgBuilder(((DatePicker) mailconfig.getChildren().get(0)).getValue().toString(),
+            htmlMsgBuilder htmlMB = new htmlMsgBuilder(((DatePicker) mailconfig.getChildren().get(0)).getValue(),
                     ((TextField) headermsg.getChildren().get(0)).getText(),
                     ((TextField) headermsg.getChildren().get(1)).getText(),
                     ((TextField) headermsg.getChildren().get(2)).getText(),
@@ -145,7 +145,7 @@ public class Main extends Application {
                     new java.util.TimerTask() {
                         @Override
                         public void run() {
-                            Platform.exit();
+                            System.exit(0);
                         }
                     },
                     5000
@@ -153,6 +153,7 @@ public class Main extends Application {
 
         } catch (MessagingException e) {
             e.printStackTrace();
+            bu.setText("Errore ricontrolare");
         }
 
     }
