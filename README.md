@@ -15,3 +15,6 @@ necesario installare questa versione o una versione succesiva per poter eseguire
 # Problemi
 
 Contatrmi per email tomassijan@gmail.com o per telefono
+
+# Screenshot
+![alt text](https://github.com/JanInInternet/MailService/blob/image.png?raw=true)
